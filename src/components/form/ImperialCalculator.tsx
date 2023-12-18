@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
 
 export function ImperialCalculator() {
-  const [pesoLb, setPesoLb] = useState<number | ''>('');
-  const [pesoSt, setPesoSt] = useState<number | ''>('');
-  const [alturaFt, setAlturaFt] = useState<number | ''>('');
-  const [alturaIn, setAlturaIn] = useState<number | ''>('');
+  const [pesoLb, setPesoLb] = useState<string | ''>('');
+  const [pesoSt, setPesoSt] = useState<string | ''>('');
+  const [alturaFt, setAlturaFt] = useState<string | ''>('');
+  const [alturaIn, setAlturaIn] = useState<string | ''>('');
   const [imcImperial, setIMCImperial] = useState<number | null>(null);
 
   useEffect(() => {
-    const pesoKg = (parseFloat(String(pesoLb)) + parseFloat(String(pesoSt)) * 14) * 0.453592; // Converte para KG
-    const alturaM = (parseFloat(String(alturaFt)) * 0.3048) + (parseFloat(String(alturaIn)) * 0.0254); //Converte para metros
+    const pesoKg = (parseFloat(pesoLb) + parseFloat(pesoSt) * 14) * 0.453592; // Converte para KG
+    const alturaM = (parseFloat(alturaFt) * 0.3048) + (parseFloat(alturaIn) * 0.0254); // Converte para metros
 
     if (!isNaN(pesoKg) && !isNaN(alturaM) && alturaM !== 0) {
       const calculoIMC = pesoKg / (alturaM * alturaM);
-      setIMCImperial(calculoIMC);
+      setIMCImperial(calculoIMC as number | null);
     } else {
       setIMCImperial(null);
     }
@@ -27,13 +27,13 @@ export function ImperialCalculator() {
     setPesoSt(event.target.value);
   };
 
-  const handleAlturaFtChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+  const handleAlturaFtChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAlturaFt(event.target.value);
   };
 
-  const handleAlturaInChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+  const handleAlturaInChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAlturaIn(event.target.value);
-  }  
+  };  
 
   return (
     <div className='mt-6'>
