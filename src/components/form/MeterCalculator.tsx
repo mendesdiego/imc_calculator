@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 export function MeterCalculator() {
-  const [peso, setPeso] = useState<number | ''>('');
-  const [altura, setAltura] = useState<number | ''>('');
+  const [peso, setPeso] = useState<string | ''>('');
+  const [altura, setAltura] = useState<string | ''>('');
   const [imc, setIMC] = useState<number | null>(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export function MeterCalculator() {
     setAltura(event.target.value);  
   };
   
-  function calcularFaixaPeso(imc: number | null, altura: number): { pesoMinimo: number; pesoMaximo: number } {
+  function calcularFaixaPeso(imc: number, altura: number): { pesoMinimo: number; pesoMaximo: number } {
     let pesoMinimo = 0;
     let pesoMaximo = 0;
 
@@ -52,7 +52,7 @@ export function MeterCalculator() {
     return {pesoMinimo, pesoMaximo}
   }
 
-  const faixaPeso = calcularFaixaPeso(imc, altura);
+  const faixaPeso = calcularFaixaPeso(imc ?? 0, parseFloat(altura));
 
   return (
     <div className='relative w-full mt-6'>
