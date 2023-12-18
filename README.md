@@ -1,3 +1,7 @@
+#IMC Calculator with React + Typescript + Tailwind CSS
+
+I created this project based on a challenge found on the Frontend Mentor website, where I took the opportunity to apply some of my study in React using React, Typescript and Tailwind CSS as technologies for the first time. Despite some differences from the original project, I believe it is a good start to apply and study new technologies. Below I leave the standard excerpt for configuring the project using Vite.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
