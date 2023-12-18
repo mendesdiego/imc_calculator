@@ -14,17 +14,6 @@ export function ImperialCalculator() {
     if (!isNaN(pesoKg) && !isNaN(alturaM) && alturaM !== 0) {
       const calculoIMC = pesoKg / (alturaM * alturaM);
       setIMCImperial(calculoIMC);
-
-      if (calculoIMC < 18.5) {
-        console.log('entrou no if de valores minimo e max');
-        
-        // Abaixo do peso
-        const minimoLibras = 6.6;
-        const maximoLibras = 10.5;
-        const minimoStone = 9;
-        const maximoStone = 12;
-      }
-
     } else {
       setIMCImperial(null);
     }
@@ -102,7 +91,7 @@ export function ImperialCalculator() {
               <div className="content__suggest md:w-1/2">
                 <p className="text-base">
                   Your BMI suggests you're a healthy weight. Your ideal weight is between 
-                  <span className="font-bold"> | 9st 6lbs - | 12st 10lbs</span>.
+                  <span className="font-bold"> 9st 6lbs - 12st 10lbs</span>.
                 </p>
               </div>
             </div>
