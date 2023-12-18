@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  --blue: #345FF6;
+  --gunMetal: #253347;
+  --darkElectricBlue: #5E6E85;
+  --borders: #D8E2E7;
+  --white: #fff;
+  --gradient: linear-gradient(290deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%);
+}
+
+.radios__metric input[type="radio"],
+.radios__imperial input[type="radio"] {
+  width: 1.9375rem;
+  height: 1.9375rem;
+}

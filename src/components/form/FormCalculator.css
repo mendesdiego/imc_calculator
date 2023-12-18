@@ -1,0 +1,11 @@
+.box__input--altura::before {
+  content: 'cm';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.075rem;
+}
