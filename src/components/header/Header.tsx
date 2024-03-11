@@ -5,12 +5,9 @@ export function Header() {
   useEffect(() => {
     function handleScroll() {
       const header = document.getElementById('mainHeader');
-      let scrollPosition = window.scrollY;
-
-      if (scrollPosition > 10) {
-        header.style.position = 'relative';
-      } else {
-        header.style.position = 'fixed';
+      if (header) {
+        let scrollPosition = window.scrollY;
+        header.style.position = scrollPosition > 10 ? 'relative' : 'fixed';
       }
     }
 
