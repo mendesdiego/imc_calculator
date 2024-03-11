@@ -1,4 +1,3 @@
-import style from "./Header.module.css";
 import Logo from "../logo/Logo";
 
 document.addEventListener('scroll', function () {
