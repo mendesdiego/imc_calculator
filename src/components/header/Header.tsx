@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Logo from '../logo/Logo';
 
 export function Header() {
   useEffect(() => {
     function handleScroll() {
-      const header = document.getElementById('mainHeader');
+      const header = document.querySelector<HTMLDivElement>('#mainHeader');
       if (header) {
         let scrollPosition = window.scrollY;
         header.style.position = scrollPosition > 10 ? 'relative' : 'fixed';
