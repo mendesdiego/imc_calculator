@@ -1,5 +1,3 @@
-import style from "./Logo.module.css";
-
 export default function Logo() {
   return (
     <div className="relative w-1/2 flex items-center justify-center p-0 xl:w-full xl:justify-start xl:pl-28">
